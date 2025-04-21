@@ -3,7 +3,7 @@
 $path = isset($_GET['file']) ? $_GET['file'] : '';
 
 // Validate the path to avoid abuse
-$allowed_ext = ['jpg','jpeg','png','gif','webp','svg','js','css','woff','woff2','ttf','eot','mp4','webm','ogg'];
+$allowed_ext = ['jpeg','jpg','png','gif','webp','svg','js','css','woff','woff2','ttf','eot','mp4','webm','ogg'];
 $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION));
 
 if (!in_array($ext, $allowed_ext)) {
